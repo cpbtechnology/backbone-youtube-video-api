@@ -1,0 +1,77 @@
+.player { width: 744px; }
+#controls { background-color: #1D1B19; height: 38px; left: 0; line-height: 0; filter: alpha(opacity=90); opacity: 0.9; padding-left: 13px; position: absolute; top: 419px; z-index: auto; }
+.video #controls {
+	-moz-transition: top 300ms ease 200ms;
+	-ms-transition: top 300ms ease 200ms;
+	-webkit-transition: top 300ms ease 200ms;
+	transition: top 300ms ease 200ms; 
+}
+.hover #controls,
+.image #controls { top: 381px; }
+.image #controls { border-right: 1px solid #3a3937; left: 50%; margin-left: -24px; padding-left: 0; width: 48px; }
+
+#controls span { display: block; float: left; padding-top: 10px; }
+#controls .divide { border-left: 1px solid #3a3937; margin: 0; padding: 10px; }
+#controls .bar { background: none #000; border-bottom: 1px solid #2d2d2c; height: 12px; padding: 0; position: relative; }
+#controls .bar span { background: none #646464; height: 6px; left: 3px; position: absolute; top: 3px; }
+#controls span span { padding: 0; }
+
+#controls #play { background-position: -26px -129px; cursor: pointer; height: 19px; margin-right: 14px; width: 14px; }
+.playing #controls #play { background-position: 0 -129px; }
+#controls #progress { cursor: pointer; margin: 12px 9px 0 0; width: 412px; }
+#controls #progress span { max-width: 406px; }
+#controls #buffer { background-color: #212121; z-index: 1; 
+	-moz-transition: width 100ms ease;
+	-webkit-transition: width 100ms ease;
+	transition: width 100ms ease; 
+}
+#controls #elapsed { z-index: 2; }
+#controls #time { background: none; font-size: 1.2em; margin-top: 10px; width: 81px; }
+#controls #sound { background: none; width: 130px; }
+#controls #mute { background-position: -54px -137px; cursor: pointer; height: 15px; width: 11px; }
+#controls #volume { cursor: pointer; margin: 3px 0 0 9px; width: 68px; }
+#controls #volume #level { max-width: 62px; width: 40%; }
+#controls #share { background-position: -71px -129px; display: none; height: 18px; position: relative; width: 29px; }
+#controls #share ul { background-color: #1D1B19; border: 1px solid #3a3937; border-bottom: none; display: none; filter: alpha(opacity=70); height: 110px; left: -1px; opacity: 0.9; position: absolute; top: -111px; width: 49px; }
+#controls #share:hover ul { display: block; }
+#controls #share li { border-bottom: 1px solid #3a3937; padding: 10px 16px; }
+#controls #share a { display: block; height: 16px; text-indent: -9999px; width: 16px; }
+#controls #share-facebook a { background-position: -76px -79px; }
+#controls #share-twitter a { background-position: -76px -96px; }
+#controls #share-google a { background-position: -76px -113px; }
+#controls #fullscreen { background-position: -113px -129px; cursor: pointer; height: 18px; width: 29px; }
+
+#toggle { background-position: 0 -1025px; cursor: pointer; display: block; height: 90px; left: 50%; margin: -45px 0 0 -45px; opacity: 0; position: absolute; top: 50%; width: 91px; z-index: 1;
+	-moz-transition: opacity 200ms;
+	-ms-transition: opacity 200ms;
+	-webkit-transition: opacity 200ms;
+	transition: opacity 200ms;
+}
+.ie8 #toggle { display: none; }
+.stopped #toggle { display: block; opacity: 1; }
+
+.fullscreen { height: 100%; overflow: auto; width: 100%; }
+.fullscreen .media.active { background: #000; background: rgba(0,0,0,0.7); }
+.fullscreen #campaigns .hero .video.active { height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 100 !important; }
+
+.fullscreen .image.clone { height: 100%; min-height: 100%; left: 0; position: absolute; text-align: center; top: 0; width: 100%; z-index: 3; }
+.fullscreen .image.clone img { height: auto; width: auto; }
+
+.fullscreen .video.active #controls { margin-top: -38px; z-index: 100; left: 50%; }
+.fullscreen .video #controls { margin-left: -372px; top: 100%; }
+.fullscreen .media.active .player { height: 100%; left: 0; position: fixed; top: 0; width: 100%; }
+
+.fullscreen.video { overflow: hidden; }
+.fullscreen.video #campaigns { overflow: visible; }
+.fullscreen.video #campaigns > li.active { overflow: visible; z-index: auto; }
+.fullscreen.video #campaigns > li.active div.campaign { height: 100%; position: fixed; }
+.fullscreen.video #campaigns li.active .description,
+.fullscreen.video #campaigns li.active .tray,
+.fullscreen.video #news-stream { display: none; }
+
+.fullscreen .jspPane { z-index: 0; }
+
+.ipad .hover #controls { top: 382px; }
+.ipad #controls #progress { width: 563px; }
+.ipad #controls #sound { display: none; }
+.ipad #toggle { display: none; }
